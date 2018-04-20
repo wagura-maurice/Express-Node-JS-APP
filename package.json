@@ -11,10 +11,16 @@
     "url": "git+https://github.com/wagura-maurice/Express-Node-JS-APP.git"
   },
   "keywords": [
-    "ExpressJS"
+    "NodeJs",
+    "ExpressJs",
+    "JavaScript"
   ],
+  "dependencies": {
+    "express": "*",
+    "body-parser": "*"
+  },
   "author": "Wagura Maurice",
-  "license": "ISC",
+  "license": "GPL-3.0",
   "bugs": {
     "url": "https://github.com/wagura-maurice/Express-Node-JS-APP/issues"
   },
