@@ -1,9 +1,7 @@
-<!DOCTYPE html>
 <html>
-<head>
-	<title>HOME</title>
-</head>
-<body>
-Welcome!!
-</body>
-</html>
+<title><%= title %></title>
+<ul>
+	<% data.forEach(function(data) { %>
+	<li><%= data.name %></li>
+	<% }); %>
+</ul>

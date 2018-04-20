@@ -1,6 +1,7 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var path = require('path');
+// var expressValidator = require('express-validator')
 
 var app = express();
 
@@ -22,12 +23,31 @@ app.set('views', path.join(__dirname, 'views'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 // express js middleware
-// app.use(express.static(path.join(__dirname, 'public')))
+// app.use(express.static(path.join(__dirname, 'public')));
+
+var fs = require('fs');
+var file = __dirname + '/data.json';
+
+fs.readFile(file, 'utf8', function (err, data) {
+  if (err) {
+    console.log('Error: ' + err);
+    return;
+  }
+
+  countries = JSON.parse(data);
+
+  // console.dir(data);
+});
+
 app.get('/', function(request, response) {
 	// response.send('Hello');
-	response.render('home');
+	// response.json(countries);
+	response.render('home', {
+		title: "Countries API",
+		data: countries
+	});
 });
 
 app.listen(port, function() {
-	console.log('Server runing on port' + port)
-})
+	// console.log('Server runing on port' + port)
+});
