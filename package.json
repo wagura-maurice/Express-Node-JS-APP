@@ -16,8 +16,9 @@
     "JavaScript"
   ],
   "dependencies": {
-    "express": "*",
-    "body-parser": "*"
+    "body-parser": "*",
+    "ejs": "^2.5.9",
+    "express": "*"
   },
   "author": "Wagura Maurice",
   "license": "GPL-3.0",
