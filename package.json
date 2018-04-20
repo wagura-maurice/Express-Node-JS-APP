@@ -1,0 +1,22 @@
+{
+  "name": "express-node-js-app",
+  "version": "1.0.0",
+  "description": "ExpressJS Crash Course : NodeJS and ExpressJS front to back. In this course we will look at the following concepts... Express Installation & Setup Middleware Routing Template Engines Forms & Input MongoDB w/ MongoJS",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wagura-maurice/Express-Node-JS-APP.git"
+  },
+  "keywords": [
+    "ExpressJS"
+  ],
+  "author": "Wagura Maurice",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wagura-maurice/Express-Node-JS-APP/issues"
+  },
+  "homepage": "https://github.com/wagura-maurice/Express-Node-JS-APP#readme"
+}
