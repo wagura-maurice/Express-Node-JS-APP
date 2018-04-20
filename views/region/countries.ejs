@@ -2,6 +2,6 @@
 <title><%= title %></title>
 <ul>
 	<% data.forEach(function(data) { %>
-	<li><%= data.name %></li>
+	<li><a href="/country/<%= data.name %>"><%= data.name %></a></li>
 	<% }); %>
 </ul>

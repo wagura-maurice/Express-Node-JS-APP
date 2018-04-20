@@ -1,0 +1,20 @@
+<html>
+<title><%= title %></title>
+<ul>
+	<% data.forEach(function(data) { %>
+	<li>NAME: <%= data.name %></li>
+	<li>Capital city: <%= data.capital %></li>
+	<li>Calling Code: +<%= data.callingCodes %></li>
+	<li>Region : <%= data.region %></li>
+	<li>Sub-region: <%= data.subregion %></li>
+	<li>Population: <%= data.population %></li>
+	<li>Area: <%= data.area %></li>
+	<li>Timezone: <%= data.timezones %></li>
+		<% data.currencies.forEach(function(currencies) { %>
+			<li>Currency: <%= currencies.name %> (<%= currencies.symbol %>)</li>
+		<% }); %>
+		<% data.languages.forEach(function(languages) { %>
+			<li>Languages: <%= languages.name %></li>
+		<% }); %>
+	<% }); %>
+</ul>

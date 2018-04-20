@@ -1,0 +1,7 @@
+<html>
+<title><%= title %></title>
+<ul>
+	<% data.forEach(function(data) { %>
+	<li><a href="/region/<%= data.name %>" style="text-transform: uppercase;"><%= data.name %></a></li>
+	<% }); %>
+</ul>
