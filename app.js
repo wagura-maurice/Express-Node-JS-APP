@@ -7,13 +7,17 @@ var app = express();
 var host = "127.0.0.1";
 var port = 3000;
 
-var logger = function(request, response, next) {
-	console.log('Loging...');
+/*var logger = function(request, response, next) {
+	console.log('Logging...');
 	next();
 }
-
-app.use(logger);
-
+*/
+// app.use(logger);
+// body parser Middleware
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: false}));
+// express js middleware
+app.use(express.static(path.join(__dirname, 'public')))
 app.get('/', function(request, response) {
 	response.send('Hello');
 });
