@@ -25,25 +25,10 @@
 <link rel="stylesheet" href="../../public/css/bootstrap.min.css">
 </head>
 <body>
-<div class="container outerpadding">
-<div class="row">
-	<% data.forEach(function(data) { %>
-	<div class="col-lg-3">
-		<div class="panel">
-			<div class="panel-heading" style="background-color:teal;color:#fff;">
-				<strong style="text-transform: uppercase;"><%= data.name %></strong>
-			</div>
-			<div class="panel-body" style="background-color:#000;color:#fff; box-shadow:0 -12px 13px teal inset;">       
-				<div class="boximg">
-					<a href="/region/<%= data.name %>" class="deco-none"><img src="../../public/images/<%= data.image %>" class="img-responsive"></a>
-				</div>         
-				<br>  
-				<span class="badge pull-right" style="background-color:teal;"><a href="/region/<%= data.name %>" class="deco-none">More</a></span>
-			</div>
-		</div>
-	</div>
-  <% }); %>
- </div>
+<div class="bgimg-1">
+  <div class="caption">
+    <span class="border"><a href="/region" class="deco-none">DIG IN DEEPER!!</a></span>
+  </div>
 </div>
 <script src="../../public/js/jquery.min.js"></script>
 <script src="../../public/js/bootstrap.min.js"></script>

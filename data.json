@@ -1,9 +1,23 @@
 [
     {
-        "name": "Africa"
+        "name": "Africa",
+        "image": "GLB-AF-01-0001.jpg"
     },
     {
-        "name": "Asia"
+        "name": "Asia",
+        "image": "GLB-AS-01-0001.jpg"
+    },
+    {
+        "name": "Americas",
+        "image": "GLB-AM-01-0001.jpg"
+    },
+    {
+        "name": "Europe",
+        "image": "GLB-EU-01-0001.jpg"
+    },
+    {
+        "name": "Oceania",
+        "image": "GLB-OC-01-0001.jpg"
     }
 
 ]

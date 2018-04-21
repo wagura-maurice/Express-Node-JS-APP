@@ -1,7 +1,87 @@
+<!DOCTYPE HTML>
 <html>
-<title><%= title %></title>
-<ul>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title><%= title %> — WORLD APP</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+<link rel="stylesheet" type="text/css" href="../../public/css/style.css">
+<link rel="apple-touch-icon" sizes="57x57" href="../../public/images/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="../../public/images/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../../public/images/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="../../public/images/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../../public/images/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="../../public/images/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="../../public/images/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="../../public/images/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../../public/images/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="../../public/images/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../public/images/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="../../public/images/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../public/images/favicon/favicon-16x16.png">
+<link rel="manifest" href="../../public/images/favicon/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="../../public/images/favicon/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="../../public/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container">
+	<h2></h2>
+	<div class="row">
+		<div class="col-md-3"></div>
+        <div class="col-md-6">
+            <div id="custom-search-input">
+                <div class="input-group col-md-12">
+                    <input type="text" class="form-control input-lg" id="search" placeholder="Search" />
+                    <span class="input-group-btn">
+                        <button class="btn btn-info btn-lg" type="button">
+                            <i class="glyphicon glyphicon-search"></i>
+                        </button>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3"></div>
+	</div>
+</div>
+
+<div class="container outerpadding">
+<div class="row">
 	<% data.forEach(function(data) { %>
-	<li><a href="/country/<%= data.name %>"><%= data.name %></a></li>
-	<% }); %>
-</ul>
+	<div class="col-lg-3">
+		<div class="panel">
+			<div class="panel-heading" style="background-color:teal;color:#fff;">
+				<strong style="text-transform: uppercase;"><%= data.name %></strong>
+			</div>
+			<div class="panel-body" style="background-color:#000;color:#fff; box-shadow:0 -12px 13px teal inset;">       
+				<div class="boximg">
+					<a href="/country/<%= data.alpha3Code %>" class="deco-none"><img src="<%= data.flag %>" class="img-responsive"></a>
+				</div>         
+				<br>  
+				<span class="badge pull-right" style="background-color:teal;"><a href="/country/<%= data.name %>" class="deco-none">More</a></span>
+			</div>
+		</div>
+	</div>
+  <% }); %>
+ </div>
+</div>
+<script src="../../public/js/jquery.min.js"></script>
+<script src="../../public/js/bootstrap.min.js"></script>
+
+<script type="text/javascript">
+    var $rows = $('.col-lg-3 .panel');
+	$('#search').keyup(function () {
+
+	    var val = '^(?=.*\\b' + $.trim($(this).val()).split(/\s+/).join('\\b)(?=.*\\b') + ').*$',
+	        reg = RegExp(val, 'i'),
+	        text;
+
+	    $rows.show().filter(function () {
+	        text = $(this).text().replace(/\s+/g, ' ');
+	        return !reg.test(text);
+	    }).hide();
+	});
+</script>
+</body>
+</html>
